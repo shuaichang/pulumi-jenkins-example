@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout code') {
       steps {
-        git(url: 'https://github.com/hryang/pulumi-jenkins-example.git', poll: true)
+        git(url: 'https://github.com/hryang/pulumi-jenkins-example.git', poll: true, branch: "main")
       }
     }
 
