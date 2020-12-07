@@ -17,9 +17,11 @@ pipeline {
     stage('Pulumi up') {
       steps {
         nodejs('nodejs 15.3.0') {
-          sh 'cd infrastructure && npm install'
-          sh 'pulumi stack select ${PULUMI_STACK} --cwd infrastructure/'
-          sh 'pulumi up --yes --cwd infrastructure/'
+          withEnv(["PATH+PULUMI=$HOME/.pulumi/bin"]) {
+            sh 'cd infrastructure && npm install'
+            sh 'pulumi stack select ${PULUMI_STACK} --cwd infrastructure/'
+            sh 'pulumi up --yes --cwd infrastructure/'
+          }
         }
 
       }
