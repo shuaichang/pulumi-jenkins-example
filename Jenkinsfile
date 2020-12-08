@@ -1,5 +1,11 @@
 pipeline {
   agent any
+  environment {
+    ALICLOUD_ACCESS_KEY = credentials("28009564-4087-43ba-a353-f2ff8ffb84ce")
+    ALICLOUD_SECRET_KEY = credentials("d69a4830-dad6-4867-b429-29b29bfd64c1")
+    PULUMI_ACCESS_TOKEN = credentials("f13491bc-1455-406d-ae62-6d1017d1bd45")
+    PULUMI_STACK = "dev"
+  }
   stages {
     stage('Checkout code') {
       steps {
@@ -28,11 +34,5 @@ pipeline {
       }
     }
 
-  }
-  environment {
-    ALICLOUD_ACCESS_KEY = 'credentials(28009564-4087-43ba-a353-f2ff8ffb84ce)'
-    ALICLOUD_SECRET_KEY = 'credentials(d69a4830-dad6-4867-b429-29b29bfd64c1)'
-    PULUMI_ACCESS_TOKEN = 'credentials(f13491bc-1455-406d-ae62-6d1017d1bd45)'
-    PULUMI_STACK = 'dev'
   }
 }
