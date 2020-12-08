@@ -1,11 +1,10 @@
 {
-    "name": "alicloud-typescript",
+    "name": "jenkins-example",
     "devDependencies": {
-        "@types/node": "latest"
+        "@types/node": "^10.0.0"
     },
     "dependencies": {
-        "@pulumi/alicloud": "^2.0.0",
-        "@pulumi/docker": "^2.0.0",
-        "@pulumi/pulumi": "^2.0.0"
+        "@pulumi/pulumi": "^2.0.0",
+        "@pulumi/alicloud": "^2.0.0"
     }
 }
