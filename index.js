@@ -6,5 +6,5 @@
 */
 exports.handler = (event, context, callback) => {
     console.log(event.toString())
-    callback(null, `hello world`);
+    callback(null, `hello china`);
 }
