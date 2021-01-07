@@ -5,6 +5,7 @@
     },
     "dependencies": {
         "@pulumi/pulumi": "^2.0.0",
-        "@pulumi/alicloud": "^2.0.0"
+        "@pulumi/alicloud": "^2.0.0",
+        "adm-zip": "^0.5.1"
     }
 }
