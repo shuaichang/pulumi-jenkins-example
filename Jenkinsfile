@@ -1,9 +1,9 @@
 pipeline {
   agent any
   environment {
-    ALICLOUD_ACCESS_KEY = credentials("9ff473a4-46fb-47e6-8886-62e34373ebb1")
-    ALICLOUD_SECRET_KEY = credentials("51ac0b1f-b11f-41b1-be5e-eb503041de9b")
-    PULUMI_ACCESS_TOKEN = credentials("9d58d423-28d4-4238-8880-687930d6fb25")
+    ALICLOUD_ACCESS_KEY = credentials("4a2eb6e6-bbef-472d-af4b-080fe185360b")
+    ALICLOUD_SECRET_KEY = credentials("0cd51aac-f5cf-4646-8335-3ff65d3dfaa0")
+    PULUMI_ACCESS_TOKEN = credentials("a8c70049-f4db-4b18-90dd-d252b17af105")
     PULUMI_STACK = "dev"
   }
   stages {
