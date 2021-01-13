@@ -24,8 +24,6 @@
       1. 配置 nodejs 插件。访问 `http://localhost:8080/configureTools/` 网址，进入全局工具配置页面。请选择 nodejs 15.3.0 版本，并将 `nodejs 15.3.0` 填入 NodeJS 别名栏中。
          ![](https://cdn.nlark.com/yuque/0/2021/png/995498/1610038248343-4540c959-20cf-4717-b656-4d04f0d554c6.png)
          > 注意：这里的 nodjes 版本要和 [Jenkinsfile](Jenkinsfile) 中的 nodejs 版本一致。您也可安装最新版本的 nodejs，但需要相应更改 Jenkinsfile 中的配置。
-    5. 访问网址 `http://localhost:8080/job/pulumi-jenkins-example/configure`，设置每隔一分钟扫描一次 github repo 变更。
-       ![](https://cdn.nlark.com/yuque/0/2021/png/995498/1610082409450-16fb0c47-8127-4e4f-8a7a-59503d54c28f.png)
 2. 在 Jenkins 中配置阿里云和 pulumi 密钥。
    1. 访问 `https://app.pulumi.com/hryang/settings/tokens`，为 jenkins 生成 pulumi token。
       ![](https://cdn.nlark.com/yuque/0/2021/png/995498/1610067429403-0ead7af9-dabd-4fa9-be11-e080e7b8e416.png)
@@ -47,3 +45,5 @@
       2. 将凭证 id 更新到 [Jenkinsfile](Jenkinsfile)中
          ![](https://cdn.nlark.com/yuque/0/2021/png/995498/1610081788605-0d03e458-6ffb-4191-a609-3a8b62749b72.png)
       3. git commit & push 更新后的 Jenkinsfile 到 github 仓库。后续的流水线任务就能成功运行。
+   5. 访问网址 `http://localhost:8080/job/pulumi-jenkins-example/configure`，设置每隔一分钟扫描一次 github repo 变更。这样 jenkins 服务能够感知到代码仓库的变化。
+       ![](https://cdn.nlark.com/yuque/0/2021/png/995498/1610082409450-16fb0c47-8127-4e4f-8a7a-59503d54c28f.png)
