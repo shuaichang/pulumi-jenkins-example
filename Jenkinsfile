@@ -22,7 +22,7 @@ pipeline {
 
     stage('Pulumi up') {
       steps {
-        nodejs('nodejs 15.4.0') {
+        nodejs('nodejs 15.3.0') {
           withEnv(overrides: ["PATH+PULUMI=$HOME/.pulumi/bin"]) {
             sh 'cd infrastructure && npm install'
             sh 'pulumi stack select ${PULUMI_STACK} --cwd infrastructure/'
